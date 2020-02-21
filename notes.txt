@@ -1,0 +1,56 @@
+Cat Rater
+
+App plan-frontend
+    App.js (navbar, cats)
+    --actions
+        cats.js
+    --components (all stateless/functional)
+        Navbar.js (about | top 5 liked | low 5 disliked)
+        About.js
+        Cat.js 
+        MostLikedCat.js
+        MostDislikedCat.js
+        **Stretch: Top 5 Liked Cats
+        **Stretch: Lowest 5 Disliked Cats
+    --containers (class syntax)
+        Cats.js (--> Cat.js)
+        LikedCats.js (--> MostLikedCat.js)
+        DislikedCats.js (--> MostDislikedCat.js)
+        **Stretch: Top/Low 5 Cats
+    --reducer
+        cats.js
+
+App plan--backend
+    Database: Cat (img, likes, name?, id)
+
+    Cats Controller
+        Index
+            -Fetch all cats
+            -Render cats
+
+        Show
+            -Render one cat
+
+        Update
+            -Update likeCount
+
+
+Features
+- Shows cat with like/dislike button
+    - After cat is liked/disliked shows another cat ready to be liked/disliked
+- Shows navbar
+- Shows most liked cat
+- Shows most disliked cat
+- Stretch:  User cannot like/dislike a cat it already liked/disliked
+- Bootstrap or materialized css 
+
+https://api.thecatapi.com/v1/images/search
+[
+    {
+        "breeds":[],
+        "id":"4o7",
+        "url":"https://cdn2.thecatapi.com/images/4o7.jpg",
+        "width":500,
+        "height":333
+    }
+]
