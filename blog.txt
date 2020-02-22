@@ -1,0 +1,6 @@
+Took a few days to figure out what I wanted to do for my project and I wasn't quite clear on how React/Redux worked, so I watched a few tutorials (a bunch, actually) and things started to make sense.  From there I was able to bettter visualize how my database should be set up and get my backend setup and tested.
+
+2/21
+- Initial git setup (finally after 4 projects git was easy to set up!  I set up the folder first on git and then cloned it and from there cd'd into the files to create my rails/react initial setup)
+- Db setup (had to look up the right command to set up the table rails g resource Cats)
+- index route setup and test
