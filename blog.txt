@@ -4,3 +4,8 @@ Took a few days to figure out what I wanted to do for my project and I wasn't qu
 - Initial git setup (finally after 4 projects git was easy to set up!  I set up the folder first on git and then cloned it and from there cd'd into the files to create my rails/react initial setup)
 - Db setup (had to look up the right command to set up the table rails g resource Cats)
 - index route setup and test
+
+2/22
+- Setup routes and controllers
+- Trick on find by!  Took me a minute to realize object coming in from find by was id and I needed to search for img_id
+- Backend is in a good place, I am feeling nervous about moving to the front end!
