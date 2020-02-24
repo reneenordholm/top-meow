@@ -3,9 +3,10 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux'
-import rootReducer from './reducers/index'
+import thunk from 'redux-thunk'
+import cats from './reducers/cats'
 
-let store = createStore(rootReducer)
+let store = createStore(cats)
 
 ReactDOM.render(
   <Provider store={store}>
