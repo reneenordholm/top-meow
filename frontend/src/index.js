@@ -4,13 +4,13 @@ import App from './App';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux'
 import thunk from 'redux-thunk'
-import cats from './reducers/cats'
+// import cats from './reducers/cats'
 
-let store = createStore(cats)
+// let store = createStore(cats)
 
 ReactDOM.render(
-  <Provider store={store}>
-    <App />
-  </Provider>,
+  // <Provider store={store}>
+    <App />,
+  // </Provider>,
   document.getElementById('root')
 );
