@@ -7,7 +7,7 @@ App plan-frontend
     --components (all stateless/functional)
         Navbar.js (about | top 5 liked | low 5 disliked)
         About.js
-        Cat.js 
+        CatCard.js 
         MostLikedCat.js
         MostDislikedCat.js
         **Stretch: Top 5 Liked Cats

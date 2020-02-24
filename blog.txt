@@ -9,3 +9,19 @@ Took a few days to figure out what I wanted to do for my project and I wasn't qu
 - Setup routes and controllers
 - Trick on find by!  Took me a minute to realize object coming in from find by was id and I needed to search for img_id
 - Backend is in a good place, I am feeling nervous about moving to the front end!
+
+2/24
+- initial front end setup (kept getting errors with npm install, realized i needed to use yarn)
+- install dependencies: react-redux, redux, react-router-dom, react-thunk
+- initial fetch test, had to change backend port to 3001
+- add css template
+- setup cats component and catcard container
+- fetch setup through thunk/redux
+
+container (still a component): get data from store and render data to components, render other components and pass data-- can have other functions inside (componentDidMount, callbacks, etc); typically are class components because they will have a state
+
+components (presentational): renders data received from container
+
+need to credit expense tracker & quote lab authors
+
+Attaching App to DOM => Render Cats Container => Cats Container renders Cats Component
