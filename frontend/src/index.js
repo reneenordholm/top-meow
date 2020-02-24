@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware, compose } from 'redux'
 import thunk from 'redux-thunk'
-import cats from './reducers/catsReducer'
+import catsReducer from './reducers/catsReducer'
 
 import App from './App';
 
@@ -14,6 +14,7 @@ const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
 // store globally stores data
 // reducer takes in action object and updates store accordingly
 // thunk allows for asychronous fetches
+// anytime data is dispatched to the store the action object will be sent to reducer, which will then update the store's value
 let store = createStore(catsReducer, composeEnhancers(applyMiddleware(thunk)))
 
 ReactDOM.render(
