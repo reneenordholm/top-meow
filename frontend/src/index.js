@@ -18,6 +18,7 @@ const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
 let store = createStore(catsReducer, composeEnhancers(applyMiddleware(thunk)))
 
 ReactDOM.render(
+  // give app access to store
   <Provider store={store}>
     <App />
   </Provider>,
