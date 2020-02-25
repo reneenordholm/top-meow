@@ -13,11 +13,21 @@ class Cats extends Component {
         this.props.fetchCats()
     }
 
+    renderCats = () => this.props.cats.map(cat =>
+        <CatCard 
+          key={cat.id}
+        //   addLike={this.props.addLike} 
+        //   removeLike={this.props.removeLike} 
+          url={cat.url} 
+        //   likes={cat.likes}
+        />
+    )
+
     render() {
         return (
             <div>
                 Cats Container
-                <CatCard cats={this.props.cats}/>
+                {this.renderCats()}
             </div>
         )
     }

@@ -4,7 +4,7 @@ export function fetchCats() {
     // thunk async function
     return (dispatch) => {
         // promise that data will be returned eventually
-        fetch('http://localhost:3001/cats')
+        fetch('https://api.thecatapi.com/v1/images/search')
         // once data is returned, comes back as json
         .then (res => res.json())
         // returned data is dispatched to reducer with the following action object

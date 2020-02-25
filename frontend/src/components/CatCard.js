@@ -6,8 +6,7 @@ const CatCard = (props) => {
 
     return (
         <div>
-            Cat Card
-            {props.cats.map(c => c.url)}
+            <img src={props.url} alt="cute cat" width="500 px"></img>
         </div>
     )
 }
