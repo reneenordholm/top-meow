@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import CatCard from '../components/CatCard'
 import { connect } from 'react-redux'
 import { fetchCats } from '../actions/fetchCats'
+import CatLikes from '../components/CatLikes'
 
 // top level container component
 class Cats extends Component {
@@ -26,8 +27,8 @@ class Cats extends Component {
     render() {
         return (
           <>
-              {this.renderCats()}
-              <h4 className="w3-center">Like this cat | Dislike this cat</h4>
+            {this.renderCats()}
+            <CatLikes />
           </>
         )
     }
