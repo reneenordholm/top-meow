@@ -7,10 +7,10 @@ export default function catsReducer(state = {cats: []}, action) {
         case 'FETCH_CATS':
             // update state with all cats
             return {cats: action.payload}
-        // case 'ADD_LIKE':
-        //     return state.map(c => ({ ...c, likes: c.likes + 1 }))
-        // case 'REMOVE_LIKE':
-        //     return state.map(c => ({ ...c, likes: c.likes - 1 }))
+        case 'ADD_LIKE':
+            return state.map(c => ({ ...c, likes: c.likes + 1 }))
+        case 'REMOVE_LIKE':
+            return state.map(c => ({ ...c, likes: c.likes - 1 }))
         default:
             // make sure something is always returned
             return state

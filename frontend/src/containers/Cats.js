@@ -3,6 +3,7 @@ import CatCard from '../components/CatCard'
 import { connect } from 'react-redux'
 import { fetchCats } from '../actions/fetchCats'
 import CatLikes from '../components/CatLikes'
+// import { addLike, removeLike } from '../actions/cats';
 
 // top level container component
 class Cats extends Component {
@@ -14,14 +15,16 @@ class Cats extends Component {
         this.props.fetchCats()
     }
 
+    // send attributes down to CatCard component
     renderCats = () => this.props.cats.map(cat =>
         <CatCard 
           key={cat.id}
-        //   addLike={this.props.addLike} 
-        //   removeLike={this.props.removeLike} 
+          addLike={this.props.addLike} 
+          removeLike={this.props.removeLike} 
           url={cat.url} 
-        //   likes={cat.likes}
+          likes={cat.likes}
         />
+        
     )
 
     render() {
