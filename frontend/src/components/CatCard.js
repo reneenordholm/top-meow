@@ -5,8 +5,8 @@ import React from 'react';
 const CatCard = (props) => {
 
     return (
-        <div>
-            <img src={props.url} alt="cute cat" width="500 px"></img>
+        <div className="w3-center">
+            <img src={props.url} className="w3-image" alt="cute cat" width="300"></img>
         </div>
     )
 }

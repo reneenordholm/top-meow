@@ -25,10 +25,10 @@ class Cats extends Component {
 
     render() {
         return (
-            <div>
-                Cats Container
-                {this.renderCats()}
-            </div>
+          <>
+              {this.renderCats()}
+              <h4 className="w3-center">Like this cat | Dislike this cat</h4>
+          </>
         )
     }
 
