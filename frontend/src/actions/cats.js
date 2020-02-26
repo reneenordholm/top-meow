@@ -1,8 +1,10 @@
-export const addLike = catId => {
-    return {
-        type: 'ADD_LIKE',
-        catId
-    }
+export const addLike = cat => {
+    return console.log(cat)
+    
+    // {
+    //     type: 'ADD_LIKE',
+    //     catId
+    // }
 }
 
 export const removeLike = catId => {

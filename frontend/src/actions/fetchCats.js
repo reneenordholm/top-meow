@@ -9,7 +9,7 @@ export function fetchCats() {
         .then (res => res.json())
         // returned data is dispatched to reducer with the following action object
         .then (cats => dispatch({
-            // update store with this data
+            // update store with this data  
             type: 'FETCH_CATS',
             payload: cats
         }))

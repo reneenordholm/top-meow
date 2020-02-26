@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import CatCard from '../components/CatCard'
 import { connect } from 'react-redux'
 import { fetchCats } from '../actions/fetchCats'
-import CatLikes from '../components/CatLikes'
-// import { addLike, removeLike } from '../actions/cats';
 
 // top level container component
 class Cats extends Component {
@@ -19,19 +17,22 @@ class Cats extends Component {
     renderCats = () => this.props.cats.map(cat =>
         <CatCard 
           key={cat.id}
+          img_id={cat.id}
           addLike={this.props.addLike} 
           removeLike={this.props.removeLike} 
           url={cat.url} 
-          likes={cat.likes}
+          // likes={cat.likes}
         />
-        
     )
+
+    componentDidUpdate() {
+      // this.props.fetchCats()
+    }
 
     render() {
         return (
           <>
             {this.renderCats()}
-            <CatLikes />
           </>
         )
     }
