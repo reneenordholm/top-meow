@@ -25,3 +25,22 @@ components (presentational): renders data received from container
 need to credit expense tracker & quote lab authors
 
 Attaching App to DOM => Render Cats Container => Cats Container renders Cats Component
+
+2/25
+- added css styling (need to give credit)
+
+upon page load fetches new cat from cat api
+
+upon like/dislike posts to db
+
+db checks to see if cat already exists
+
+if yes, add/remove like accordingly
+return updated like/dislike count
+screen displays updated like/dislike count
+
+if no, add cat to db
+add/remove like accordingly
+return updated like/dislike count
+screen displays updated like/dislike count
+
