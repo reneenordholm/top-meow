@@ -7,12 +7,11 @@ export default function catsReducer(state = {cat: []}, action) {
         case 'FETCH_CAT':
             // fetch cat from cat api
             return {cat: action.payload}
-        case 'UPDATE_LIKE':
-            return console.log(state)
-            //     { ...state, 
-            //     ...state.cats.concat([likes: 1])
-            //  })
-            // return { ...state, likes: 1 }
+        // case 'UPDATE_LIKE':
+        //     return { 
+        //         ...state, 
+        //         cats: [...state.cats, action.payload]
+        //     }
         default:
             // make sure something is always returned
             return state
