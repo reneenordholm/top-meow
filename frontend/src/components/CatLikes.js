@@ -6,7 +6,8 @@ import { fetchCat } from '../actions/fetchCat'
 class CatLikes extends Component {
     state = {
         likes: 0,
-        img_id: ''
+        img_id: '',
+        url: ''
     }
 
     handleAddLike = event => {
@@ -14,7 +15,8 @@ class CatLikes extends Component {
 
         this.setState({
             likes: this.state.likes + 1,
-            img_id: event.target.id
+            img_id: event.target.id,
+            url: event.target.value
           })
     }
 
@@ -23,7 +25,8 @@ class CatLikes extends Component {
 
         this.setState({
             likes: this.state.likes - 1,
-            img_id: event.target.id
+            img_id: event.target.id,
+            url: event.target.value
           })
     }
 
@@ -36,9 +39,9 @@ class CatLikes extends Component {
         return (
             <>
                 <h5 className="w3-center">
-                    <button id={this.props.img_id} onClick={this.handleAddLike} className="w3-bar-item w3-button">Like this cat</button>
+                    <button id={this.props.img_id} value={this.props.url} onClick={this.handleAddLike} className="w3-bar-item w3-button">Like this cat</button>
                         |
-                    <button id={this.props.img_id} onClick={this.handleRemoveLike} className="w3-bar-item w3-button">Dislike this cat</button>
+                    <button id={this.props.img_id} value={this.props.url} onClick={this.handleRemoveLike} className="w3-bar-item w3-button">Dislike this cat</button>
                 </h5>
             </>
         );
