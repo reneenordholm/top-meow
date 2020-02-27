@@ -44,3 +44,6 @@ add/remove like accordingly
 return updated like/dislike count
 screen displays updated like/dislike count
 
+2/27
+- added local state to catlikes; when like/dislike button is pushed the local state updates appropriately and dispatches local state to thunk dispatch post method
+- at first I thought I would be rendering a bunch of cats but through third party cat api we render 1 cat at a time and therefore am only rendering one cat--I updated all files and functions to reflect cat rather than cats
