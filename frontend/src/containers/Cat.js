@@ -1,20 +1,20 @@
 import React, { Component } from 'react';
 import CatCard from '../components/CatCard'
 import { connect } from 'react-redux'
-import { fetchCats } from '../actions/fetchCats'
+import { fetchCat } from '../actions/fetchCat'
 
 // top level container component
-class Cats extends Component {
+class Cat extends Component {
 
-    // fetch all cats upon dom load
+    // fetch new cat on dom load
     componentDidMount() {
         // dispatch store to fetch all cats
         // without this.props fn would not connect to store
-        this.props.fetchCats()
+        this.props.fetchCat()
     }
 
     // send attributes down to CatCard component
-    renderCats = () => this.props.cats.map(cat =>
+    renderCat = () => this.props.cat.map(cat =>
         <CatCard 
           key={cat.id}
           img_id={cat.id}
@@ -32,7 +32,7 @@ class Cats extends Component {
     render() {
         return (
           <>
-            {this.renderCats()}
+            {this.renderCat()}
           </>
         )
     }
@@ -42,9 +42,9 @@ class Cats extends Component {
 // access values in store as props
 const mapStateToProps = (state) => {
   return {
-    cats: state.cats
+    cat: state.cat
   }
 }
 
 // fetchCats available as dispatch
-export default connect(mapStateToProps, { fetchCats })(Cats)
+export default connect(mapStateToProps, { fetchCat })(Cat)

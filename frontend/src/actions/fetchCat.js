@@ -1,6 +1,6 @@
 // action is sent to reducer
 
-export function fetchCats() {
+export function fetchCat() {
     // thunk async function
     return (dispatch) => {
         // promise that data will be returned eventually
@@ -8,10 +8,10 @@ export function fetchCats() {
         // once data is returned, comes back as json
         .then (res => res.json())
         // returned data is dispatched to reducer with the following action object
-        .then (cats => dispatch({
+        .then (cat => dispatch({
             // update store with this data  
-            type: 'FETCH_CATS',
-            payload: cats
+            type: 'FETCH_CAT',
+            payload: cat
         }))
         
     }

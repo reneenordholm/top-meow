@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Cats from './containers/Cats'
+import Cat from './containers/Cat'
 
 class App extends Component {
 
@@ -8,7 +8,7 @@ class App extends Component {
       <div className="w3-content">
         <div className="w3-display-container w3-content w3-wide" id="home">
           <h1 className="w3-center">Top Meow!</h1>
-          <Cats />
+          <Cat />
         </div>
       </div>
     );

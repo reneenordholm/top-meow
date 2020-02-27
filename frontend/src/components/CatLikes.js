@@ -1,43 +1,47 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { addLike, removeLike } from '../actions/cats';
+import { updateLike } from '../actions/updateLike';
 
 class CatLikes extends Component {
     state = {
-        likes: ''    
+        likes: 0,
+        img_id: ''
     }
 
     handleAddLike = event => {
         event.preventDefault();
-        // const cat = {...this.state, likes: 0 };
 
-        const cat = this.setState({
-            likes: 1
-            // [event.target.name]: event.target.value
+        this.setState({
+            likes: this.state.likes + 1,
+            img_id: event.target.id
           })
-
-        this.props.addLike(cat)
     }
 
     handleRemoveLike = event => {
         event.preventDefault();
 
-        const cat = {...this.state, likes: -1 };
-    
-        this.props.removeLike(cat)
+        this.setState({
+            likes: this.state.likes - 1,
+            img_id: event.target.id
+          })
+    }
+
+    componentDidUpdate() {
+        this.props.updateLike(this.state)
     }
 
     render() {
         return (
             <>
                 <h5 className="w3-center">
-                    <button  onClick={this.handleAddLike} className="w3-bar-item w3-button">Like this cat</button>
+                    <button id={this.props.img_id} onClick={this.handleAddLike} className="w3-bar-item w3-button">Like this cat</button>
                         |
-                    <button onClick={this.handleRemoveLike} className="w3-bar-item w3-button">Dislike this cat</button>
+                    <button id={this.props.img_id} onClick={this.handleRemoveLike} className="w3-bar-item w3-button">Dislike this cat</button>
                 </h5>
             </>
         );
     }
 }
 
-export default connect(null, { addLike, removeLike })(CatLikes)
+// this dispatch is using thunk's dispatch capability
+export default connect(null, { updateLike })(CatLikes)
