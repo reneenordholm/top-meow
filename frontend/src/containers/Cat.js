@@ -21,13 +21,8 @@ class Cat extends Component {
           addLike={this.props.addLike} 
           removeLike={this.props.removeLike} 
           url={cat.url} 
-          // likes={cat.likes}
         />
     )
-
-    componentDidUpdate() {
-      // this.props.fetchCats()
-    }
 
     render() {
         return (
@@ -36,7 +31,6 @@ class Cat extends Component {
           </>
         )
     }
-
 }
 
 // access values in store as props

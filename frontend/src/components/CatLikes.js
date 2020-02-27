@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { updateLike } from '../actions/updateLike';
+import { fetchCat } from '../actions/fetchCat'
 
 class CatLikes extends Component {
     state = {
@@ -28,6 +29,7 @@ class CatLikes extends Component {
 
     componentDidUpdate() {
         this.props.updateLike(this.state)
+        this.props.fetchCat()
     }
 
     render() {
@@ -44,4 +46,4 @@ class CatLikes extends Component {
 }
 
 // this dispatch is using thunk's dispatch capability
-export default connect(null, { updateLike })(CatLikes)
+export default connect(null, { updateLike, fetchCat })(CatLikes)
