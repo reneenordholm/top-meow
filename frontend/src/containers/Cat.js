@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import CatCard from '../components/CatCard'
 import { connect } from 'react-redux'
-import { fetchCat } from '../actions/fetchCat'
+import { fetchCats } from '../actions/fetchCat'
 
 // top level container component
 class Cat extends Component {
@@ -10,7 +10,7 @@ class Cat extends Component {
     componentDidMount() {
         // dispatch store to fetch all cats
         // without this.props fn would not connect to store
-        this.props.fetchCat()
+        this.props.fetchCats()
     }
 
     // send attributes down to CatCard component
@@ -41,4 +41,4 @@ const mapStateToProps = (state) => {
 }
 
 // fetchCats available as dispatch
-export default connect(mapStateToProps, { fetchCat })(Cat)
+export default connect(mapStateToProps, { fetchCats })(Cat)

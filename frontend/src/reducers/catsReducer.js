@@ -4,7 +4,7 @@
 // set initial state to empty object
 export default function catsReducer(state = {cat: []}, action) {
     switch(action.type) {
-        case 'FETCH_CAT':
+        case 'FETCH_CATS':
             // fetch cat from cat api
             return {cat: action.payload}
         // case 'UPDATE_LIKE':
