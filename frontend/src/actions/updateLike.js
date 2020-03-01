@@ -4,15 +4,15 @@ export const updateLike = cat => {
     
     return (dispatch) => {
         fetch('http://localhost:3001/cats', {
-            headers: {
-                'Content-Type': 'application/json',
-                'Accept': 'application/json'
-            },
             method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
             body: JSON.stringify(cat)
         })
-        // .then(res => res.json())
-        // .then(cat => dispatch({ type: 'UPDATE_LIKE', payload: cat }))
+        .then(res => res.json())
+
+        .then(cat => dispatch({ type: 'UPDATE_LIKE', payload: cat }))
     }
 
 }

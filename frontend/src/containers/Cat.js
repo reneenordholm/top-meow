@@ -14,10 +14,10 @@ class Cat extends Component {
     }
 
     // send attributes down to CatCard component
-    renderCat = () => this.props.cat.map(cat =>
+    renderCat = () => this.props.cats.map(cat =>
         <CatCard 
           key={cat.id}
-          img_id={cat.id}
+          img_id={cat.img_id}
           addLike={this.props.addLike} 
           removeLike={this.props.removeLike} 
           url={cat.url} 
@@ -36,7 +36,7 @@ class Cat extends Component {
 // access values in store as props
 const mapStateToProps = (state) => {
   return {
-    cat: state.cat
+    cats: state.cats
   }
 }
 

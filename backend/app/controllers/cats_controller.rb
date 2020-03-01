@@ -19,10 +19,13 @@ class CatsController < ApplicationController
 
     def create
         cat = Cat.find_by(img_id: params[:img_id])
-
+        
         if cat != nil
             cat.likes = cat.likes + params[:likes]
-            cat.update(cat.likes)
+            cat.update(cat_params)
+            cat.save
+            
+            render json: cat.to_json(:except => [:created_at, :updated_at])
         else
             Cat.create(cat_params)
         end

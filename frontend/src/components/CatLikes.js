@@ -32,7 +32,7 @@ class CatLikes extends Component {
 
     componentDidUpdate() {
         this.props.updateLike(this.state)
-        this.props.fetchCat()
+        // this.props.fetchCat()
     }
 
     render() {
