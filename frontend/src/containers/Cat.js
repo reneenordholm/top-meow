@@ -13,6 +13,7 @@ class Cat extends Component {
         this.props.fetchCats()
     }
 
+    // iterate through each cat
     // send attributes down to CatCard component
     renderCat = () => this.props.cats.map(cat =>
         <CatCard 

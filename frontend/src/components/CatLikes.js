@@ -4,15 +4,19 @@ import { updateLike } from '../actions/updateLike';
 import { fetchCat } from '../actions/fetchCat'
 
 class CatLikes extends Component {
+    // start with a blank local state
     state = {
         likes: '',
         img_id: '',
         url: ''
     }
 
+    // when 'like this cat' button is clicked
     handleAddLike = event => {
+        // prevent page from refreshing
         event.preventDefault();
 
+        // update local state with new cat like tally, img_id and url
         this.setState({
             likes: this.props.likes + 1,
             img_id: event.target.id,
@@ -20,9 +24,12 @@ class CatLikes extends Component {
           })
     }
 
+    // when 'dislike this cat' button is clicked
     handleRemoveLike = event => {
+        // prevent page from refreshing
         event.preventDefault();
 
+        // update local state with new cat like tally, img_id and url
         this.setState({
             likes: this.props.likes - 1,
             img_id: event.target.id,
@@ -30,12 +37,14 @@ class CatLikes extends Component {
           })
     }
 
+    // when the local state is updated
+    // send those updated cat attributes to updatelike action component
     componentDidUpdate() {
         this.props.updateLike(this.state)
-        
-        // this.props.fetchCat()
     }
 
+    // render the 'like this cat,' 'dislike this cat' buttons 
+    // like appropriate attributes to each button
     render() {
         return (
             <>

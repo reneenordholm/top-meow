@@ -3,6 +3,7 @@ import CatLikes from '../components/CatLikes'
 
 // stateless/functional component
 // render cat image on dom load
+// send individual cat attributes to CatLikes component
 const CatCard = (props) => {
     return (
         <div className="w3-center">

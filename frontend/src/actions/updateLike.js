@@ -1,5 +1,7 @@
-// receive cat data from once state is updated in catlikes
-// using thunk to dispatch 
+// receive cat data once state is updated in catlikes component
+// use thunk to dispatch post fetch request
+// updated cat data is sent to db and returned as json
+// json data sent to catsreducer to update redux state
 export const updateLike = cat => {
     
     return (dispatch) => {
