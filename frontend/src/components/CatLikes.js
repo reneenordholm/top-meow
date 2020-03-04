@@ -5,7 +5,7 @@ import { fetchCat } from '../actions/fetchCat'
 
 class CatLikes extends Component {
     state = {
-        likes: 0,
+        likes: '',
         img_id: '',
         url: ''
     }
@@ -14,7 +14,7 @@ class CatLikes extends Component {
         event.preventDefault();
 
         this.setState({
-            likes: this.state.likes + 1,
+            likes: this.props.likes + 1,
             img_id: event.target.id,
             url: event.target.value
           })
@@ -24,7 +24,7 @@ class CatLikes extends Component {
         event.preventDefault();
 
         this.setState({
-            likes: this.state.likes - 1,
+            likes: this.props.likes - 1,
             img_id: event.target.id,
             url: event.target.value
           })
@@ -32,6 +32,7 @@ class CatLikes extends Component {
 
     componentDidUpdate() {
         this.props.updateLike(this.state)
+        
         // this.props.fetchCat()
     }
 

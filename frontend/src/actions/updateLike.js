@@ -11,7 +11,6 @@ export const updateLike = cat => {
             body: JSON.stringify(cat)
         })
         .then(res => res.json())
-
         .then(cat => dispatch({ type: 'UPDATE_LIKE', payload: cat }))
     }
 

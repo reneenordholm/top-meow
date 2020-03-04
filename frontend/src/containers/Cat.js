@@ -21,6 +21,7 @@ class Cat extends Component {
           addLike={this.props.addLike} 
           removeLike={this.props.removeLike} 
           url={cat.url} 
+          likes={cat.likes}
         />
     )
 

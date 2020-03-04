@@ -24,7 +24,7 @@ class CatsController < ApplicationController
             cat.likes = cat.likes + params[:likes]
             cat.update(cat_params)
             cat.save
-            
+
             render json: cat.to_json(:except => [:created_at, :updated_at])
         else
             Cat.create(cat_params)
