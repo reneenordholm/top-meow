@@ -21,6 +21,7 @@ let store = createStore(catsReducer, composeEnhancers(applyMiddleware(thunk)))
 
 ReactDOM.render(
   // give app access to store
+  // router access--any child component can now be linked to
   <Provider store={store}>
     <Router>
       <App />
