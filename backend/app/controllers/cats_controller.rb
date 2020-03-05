@@ -5,6 +5,7 @@ class CatsController < ApplicationController
     end
 
     def show
+        binding.pry
         cats = Cat.all
         cat = cats.sort { |k1, k2| k2[:likes] <=> k1[:likes] }
 
