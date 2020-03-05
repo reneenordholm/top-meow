@@ -5,6 +5,7 @@ import { createStore, applyMiddleware, compose } from 'redux'
 import thunk from 'redux-thunk'
 import catsReducer from './reducers/catsReducer'
 import './index.css'
+import { BrowserRouter as Router } from 'react-router-dom'
 
 import App from './App';
 
@@ -21,7 +22,9 @@ let store = createStore(catsReducer, composeEnhancers(applyMiddleware(thunk)))
 ReactDOM.render(
   // give app access to store
   <Provider store={store}>
-    <App />
+    <Router>
+      <App />
+    </Router>
   </Provider>,
   document.getElementById('root')
 );
