@@ -5,7 +5,7 @@ import TopCat from './TopCat'
 class LeastLiked extends Component {
 
   renderCat = () => [].concat(this.props.cats)
-    .sort((a, b) => a.likes.value - b.likes.value)
+    .sort((a, b) => a.likes - b.likes)
     .map((cat) => 
       <TopCat 
         key={cat.id}
@@ -13,7 +13,7 @@ class LeastLiked extends Component {
         url={cat.url} 
         likes={cat.likes}
       />
-    );
+    )[0];
   
   render() {
     return (
