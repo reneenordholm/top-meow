@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
-import TopCat from './CatCard'
+import TopCat from './TopCat'
 
 class MostLiked extends Component {
 
