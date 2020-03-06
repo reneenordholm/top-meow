@@ -54,3 +54,12 @@ screen displays updated like/dislike count
 
 3/3
 - Likes/dislikes are fetching/posting to db correctly, utilizing redux state correctly, and tallying like count correctly both through db and redux
+
+3/5
+- update page title and favicon, had trouble copying over icon file so had to add manually to git repo and then pull down the file from git
+- set up nav bar and incorporated browserrouter/react-router-dom
+- routes functioning properly!!
+- skeleton pages setup for most liked, least liked, and about
+- most liked algorithm and skeleton for page complete
+
+routes need to be setup in component that can send props to component
