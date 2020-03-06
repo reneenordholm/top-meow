@@ -63,3 +63,6 @@ screen displays updated like/dislike count
 - most liked algorithm and skeleton for page complete
 
 routes need to be setup in component that can send props to component
+
+3/6
+- Mostlike/leastliked functionality working appropriately, had issues but realized it was becase I was pulling the wrong data from sort
