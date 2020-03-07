@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import { Route } from 'react-router-dom'
 import Cat from './containers/Cat'
 import NavBar from './components/NavBar'
-import MostLiked from './components/MostLiked'
-import LeastLiked from './components/LeastLiked'
+import MostLiked from './containers/MostLiked'
+import LeastLiked from './containers/LeastLiked'
 import About from './components/About'
 
 
