@@ -22,8 +22,6 @@ class CatLikes extends Component {
             img_id: event.target.id,
             url: event.target.value
           })
-
-        // this.props.goToNext()
     }
 
     // when 'dislike this cat' button is clicked
@@ -37,8 +35,6 @@ class CatLikes extends Component {
             img_id: event.target.id,
             url: event.target.value
           })
-
-        // this.props.goToNext()
     }
 
     // when the local state is updated
