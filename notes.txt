@@ -54,3 +54,5 @@ https://api.thecatapi.com/v1/images/search
         "height":333
     }
 ]
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

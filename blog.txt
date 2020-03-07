@@ -66,3 +66,8 @@ routes need to be setup in component that can send props to component
 
 3/6
 - Mostlike/leastliked functionality working appropriately, had issues but realized it was becase I was pulling the wrong data from sort
+
+3/7
+- load all cats, show one cat, upon like/dislike show new cat
+- index renders one cat at a time appropriately, changes to new cat after like/dislike
+ 
