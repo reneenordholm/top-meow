@@ -6,25 +6,37 @@ import { fetchCats } from '../actions/fetchCat'
 // top level container component
 class Cat extends Component {
 
+  state = {
+    index: 0
+  };    
+
   // fetch new cat on dom load
   componentDidMount() {
-      // dispatch store to fetch all cats
-      // without this.props fn would not connect to store
-      this.props.fetchCats()
+    // dispatch store to fetch all cats
+    // without this.props fn would not connect to store
+    this.props.fetchCats()  
   }
 
   // iterate through each cat
   // send attributes down to CatCard component
-  renderCat = () => this.props.cats.map(cat =>
-      <CatCard 
+  renderCat = () => this.props.cats.map( (cat, index) => {
+    if ( index === this.state.index ) {
+      return <CatCard 
         key={cat.id}
         img_id={cat.img_id}
         addLike={this.props.addLike} 
         removeLike={this.props.removeLike} 
         url={cat.url} 
         likes={cat.likes}
+        goToNext={this.goToNext}
       />
-  )
+    }
+    return null
+  })
+
+  goToNext = () => {
+    this.setState({ index: (this.state.index + 1) % this.props.cats.length });
+  };
 
   render() {
     return (
