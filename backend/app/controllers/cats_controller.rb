@@ -4,19 +4,19 @@ class CatsController < ApplicationController
         render json: cats.to_json(:except => [:created_at, :updated_at])
     end
 
-    def show
-        binding.pry
-        cats = Cat.all
-        cat = cats.sort { |k1, k2| k2[:likes] <=> k1[:likes] }
+    # def show
+    #     binding.pry
+    #     cats = Cat.all
+    #     cat = cats.sort { |k1, k2| k2[:likes] <=> k1[:likes] }
 
-        if top_meow
-            cat.first
-            render json: cat.to_json(:except => [:created_at, :updated_at])
-        else
-            cat.last
-            render json: cat.to_json(:except => [:created_at, :updated_at])
-        end
-    end
+    #     if top_meow
+    #         cat.first
+    #         render json: cat.to_json(:except => [:created_at, :updated_at])
+    #     else
+    #         cat.last
+    #         render json: cat.to_json(:except => [:created_at, :updated_at])
+    #     end
+    # end
 
     def create
         cat = Cat.find_by(img_id: params[:img_id])
