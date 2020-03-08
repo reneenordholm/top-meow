@@ -22,7 +22,6 @@ A step by step series of examples that tell you how to get a development env run
 * [sqlite3](https://rubygems.org/gems/sqlite3) - Database engine
 * [Gourmet Catering Template](https://www.w3schools.com/w3css/tryit.asp?filename=tryw3css_templates_gourmet_catering&stacked=h)/[W3 Schools](https://www.w3schools.com/w3css/w3css_templates.asp) - CSS Styling
 * [theCatAPI-website](https://github.com/adenforshaw/thecatapi-website)/[AdenForshaw](https://github.com/AdenForshaw) - Cat photos
-* 
 
 ## Contributing
 
