@@ -1,6 +1,6 @@
 # TOP MEOW
 
-Like or dislike cat photo as it appears on the screen.  Likes and dislikes are tallied and shown on seperate pages.
+Like and dislike random cat photos, and see who's top meow.
 
 ### Installing
 
