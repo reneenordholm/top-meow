@@ -33,7 +33,7 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/reneen
 
 ## Video Walkthrough
 
-* [YouTube](https://youtu.be/6kxpRVOcgq4) - *Front end walkthrough*
+* [YouTube](https://youtu.be/CdCas3iFqxM) - *Front end walkthrough*
 
 ## License
 
