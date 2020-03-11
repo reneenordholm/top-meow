@@ -24,17 +24,17 @@ class Cat extends Component {
       return <CatCard 
         key={cat.id}
         img_id={cat.img_id}
-        addLike={this.props.addLike} 
-        removeLike={this.props.removeLike} 
         url={cat.url} 
         likes={cat.likes}
-        goToNext={this.goToNext}
+        addLike={this.props.addLike} 
+        removeLike={this.props.removeLike} 
+        renderNextCat={this.renderNextCat}
       />
     }
     return null
   })
 
-  goToNext = () => {
+  renderNextCat = () => {
     this.setState({ index: (this.state.index + 1) % this.props.cats.length });
   };
 
