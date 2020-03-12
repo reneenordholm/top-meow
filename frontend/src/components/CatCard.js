@@ -12,8 +12,6 @@ const CatCard = (props) => {
                 img_id={props.img_id} 
                 likes={props.likes} 
                 url={props.url} 
-                addLike={props.addLike} 
-                removeLike={props.removeLike}
                 renderNextCat={props.renderNextCat} 
             />
         </div>

@@ -4,8 +4,7 @@ import TopCat from '../components/TopCat'
 
 class MostLiked extends Component {
 
-  renderCat = () => [].concat(this.props.cats)
-    .sort((a, b) => b.likes - a.likes )
+  renderCat = () => this.props.cats.sort((a, b) => b.likes - a.likes)
     .map((cat) => 
       <TopCat 
         key={cat.id}

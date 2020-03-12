@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Route } from 'react-router-dom'
 import Cat from './containers/Cat'
 import NavBar from './components/NavBar'
@@ -7,9 +7,9 @@ import LeastLiked from './containers/LeastLiked'
 import About from './components/About'
 
 
-class App extends Component {
-
-  render() {
+const App = () => {
+  // load navbar
+  // route browser links to appropriate components
     return (
       <>
         <NavBar />
@@ -21,6 +21,5 @@ class App extends Component {
       </>
     );
   }
-}
 
 export default App

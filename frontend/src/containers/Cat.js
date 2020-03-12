@@ -26,8 +26,6 @@ class Cat extends Component {
         img_id={cat.img_id}
         url={cat.url} 
         likes={cat.likes}
-        addLike={this.props.addLike} 
-        removeLike={this.props.removeLike} 
         renderNextCat={this.renderNextCat}
       />
     }

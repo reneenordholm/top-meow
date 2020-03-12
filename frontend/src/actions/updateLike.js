@@ -1,4 +1,4 @@
-// receive cat data once state is updated in catlikes component
+// receive cat data once state is updated in likesbutton component
 // use thunk to dispatch post fetch request
 // updated cat data is sent to db and returned as json
 // json data sent to catsreducer to update redux state
